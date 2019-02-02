@@ -13,7 +13,7 @@ public class Architecture {
     /**
      * This will skip tests on an x86-based device even if there are other available ABIs.
      * Only do this if you know the code path you are testing is not supported on x86.
-     */
+    **/
     public static class X86 implements Condition {
         @Override
         public boolean isSatisfied() {
@@ -30,7 +30,6 @@ public class Architecture {
             }
         }
 
-        @SuppressWarnings("deprecation")
         private static Collection<String> cpuApi() {
             return singletonList(Build.CPU_ABI);
         }

@@ -5,9 +5,6 @@ import android.os.Build;
 
 public class Camera {
 
-    /**
-     * @deprecated Still uses the Camera api, would be nice to migrate to Camera2.
-     */
     @Deprecated
     public static class NoBackFacingCamera implements Condition {
 
@@ -19,7 +16,7 @@ public class Camera {
     }
 
     @TargetApi(Build.VERSION_CODES.GINGERBREAD)
-    public static boolean hasCamera(int cameraFacing) {
+    private static boolean hasCamera(int cameraFacing) {
         android.hardware.Camera.CameraInfo info = new android.hardware.Camera.CameraInfo();
         for (int i = 0; i < android.hardware.Camera.getNumberOfCameras(); i++) {
             android.hardware.Camera.getCameraInfo(i, info);

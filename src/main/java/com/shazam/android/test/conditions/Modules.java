@@ -3,11 +3,11 @@ package com.shazam.android.test.conditions;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
-import android.support.test.InstrumentationRegistry;
+import androidx.test.InstrumentationRegistry;
 
 class Modules {
 
-    static Context getTargetContext() {
+    private static Context getTargetContext() {
         return InstrumentationRegistry.getTargetContext();
     }
 

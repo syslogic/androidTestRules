@@ -3,6 +3,7 @@ package com.shazam.android.test.conditions;
 import android.os.Build;
 
 public class Device {
+
     public static class Genymotion implements Condition {
 
         @Override
